@@ -1,0 +1,575 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Profil Mahasiswa - Galih Condro Widjoyo</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- CSS External -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- ================= NAVBAR ================= -->
+
+    <nav class="navbar navbar-expand-lg navbar-dark sticky-top">
+
+        <div class="container">
+
+            <a class="navbar-brand fw-bold" href="#">
+                Profil Mahasiswa
+            </a>
+
+            <button class="navbar-toggler"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#menu">
+
+                <span class="navbar-toggler-icon"></span>
+
+            </button>
+
+            <div class="collapse navbar-collapse" id="menu">
+
+                <ul class="navbar-nav ms-auto">
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#profil">
+                            Profil
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#nilai">
+                            Nilai
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#ipk">
+                            IPK
+                        </a>
+                    </li>
+
+                </ul>
+
+            </div>
+
+        </div>
+
+    </nav>
+
+
+    <!-- ================= HERO ================= -->
+
+    <section class="hero text-center">
+
+        <div class="container">
+
+            <p class="mb-2">
+                WELCOME TO MY PROFILE
+            </p>
+
+            <h1 class="display-4 fw-bold">
+                Galih Condro Widjoyo
+            </h1>
+
+            <p class="lead">
+                Sistem dan Teknologi Informasi
+            </p>
+
+            <button class="btn btn-light mt-3"
+                onclick="tampilkanPesan()">
+
+                Lihat Profil
+
+            </button>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= PROFIL ================= -->
+
+    <section id="profil" class="container">
+
+        <div class="card profile-card">
+
+            <div class="card-body p-4 p-md-5">
+
+                <!-- ICON -->
+                <div class="profile-icon mb-4">
+                    GC
+                </div>
+
+
+                <!-- DATA PROFIL -->
+
+                <div class="row g-3">
+
+                    <!-- NBI -->
+
+                    <div class="col-md-6 col-lg-3">
+
+                        <div class="info-box">
+
+                            <small class="text-muted">
+                                NBI
+                            </small>
+
+                            <h5 class="fw-bold mt-2">
+                                1482500032
+                            </h5>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- PROGRAM STUDI -->
+
+                    <div class="col-md-6 col-lg-3">
+
+                        <div class="info-box">
+
+                            <small class="text-muted">
+                                Program Studi
+                            </small>
+
+                            <h5 class="fw-bold mt-2">
+                                Sistem dan Teknologi Informasi
+                            </h5>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- TOTAL SKS -->
+
+                    <div class="col-md-6 col-lg-3">
+
+                        <div class="info-box">
+
+                            <small class="text-muted">
+                                Total SKS
+                            </small>
+
+                            <h5 class="fw-bold mt-2">
+                                20 SKS
+                            </h5>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- HOBI -->
+
+                    <div class="col-md-6 col-lg-3">
+
+                        <div class="info-box">
+
+                            <small class="text-muted">
+                                Hobi
+                            </small>
+
+                            <h5 class="fw-bold mt-2">
+                                Naik Gunung
+                            </h5>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= NILAI ================= -->
+
+    <section id="nilai" class="container mt-5">
+
+        <div class="table-container">
+
+            <div class="text-center mb-4">
+
+                <h2 class="fw-bold">
+                    Nilai Mata Kuliah
+                </h2>
+
+                <p class="text-muted">
+                    Daftar nilai mata kuliah semester 2
+                </p>
+
+            </div>
+
+
+            <div class="table-responsive">
+
+                <table class="table table-hover align-middle">
+
+                    <thead class="table-dark">
+
+                        <tr>
+
+                            <th>No.</th>
+                            <th>Kode</th>
+                            <th>Nama Mata Kuliah</th>
+                            <th>Semester</th>
+                            <th>SKS</th>
+                            <th>Nilai</th>
+                            <th>N.K</th>
+
+                        </tr>
+
+                    </thead>
+
+
+                    <tbody>
+
+                        <tr>
+
+                            <td>1</td>
+
+                            <td>
+                                14823192
+                            </td>
+
+                            <td>
+                                Arsitektur dan Organisasi Komputer
+                            </td>
+
+                            <td>2</td>
+
+                            <td>2</td>
+
+                            <td>
+                                <span class="badge bg-primary">
+                                    AB
+                                </span>
+                            </td>
+
+                            <td>
+                                7.00
+                            </td>
+
+                        </tr>
+
+
+                        <tr>
+
+                            <td>2</td>
+
+                            <td>
+                                14823333
+                            </td>
+
+                            <td>
+                                Algoritma dan Struktur Data
+                            </td>
+
+                            <td>2</td>
+
+                            <td>3</td>
+
+                            <td>
+                                <span class="badge bg-success">
+                                    A
+                                </span>
+                            </td>
+
+                            <td>
+                                12.00
+                            </td>
+
+                        </tr>
+
+
+                        <tr>
+
+                            <td>3</td>
+
+                            <td>
+                                14823313
+                            </td>
+
+                            <td>
+                                Sistem Basis Data
+                            </td>
+
+                            <td>2</td>
+
+                            <td>3</td>
+
+                            <td>
+                                <span class="badge bg-primary">
+                                    AB
+                                </span>
+                            </td>
+
+                            <td>
+                                10.50
+                            </td>
+
+                        </tr>
+
+
+                        <tr>
+
+                            <td>4</td>
+
+                            <td>
+                                14823393
+                            </td>
+
+                            <td>
+                                Interaksi Manusia Komputer
+                            </td>
+
+                            <td>2</td>
+
+                            <td>3</td>
+
+                            <td>
+                                <span class="badge bg-warning text-dark">
+                                    B
+                                </span>
+                            </td>
+
+                            <td>
+                                9.00
+                            </td>
+
+                        </tr>
+
+
+                        <tr>
+
+                            <td>5</td>
+
+                            <td>
+                                14823153
+                            </td>
+
+                            <td>
+                                Teknologi Informasi dan Aplikasi Bisnis Berkembang
+                            </td>
+
+                            <td>2</td>
+
+                            <td>3</td>
+
+                            <td>
+                                <span class="badge bg-warning text-dark">
+                                    B
+                                </span>
+                            </td>
+
+                            <td>
+                                9.00
+                            </td>
+
+                        </tr>
+
+
+                        <tr>
+
+                            <td>6</td>
+
+                            <td>
+                                14823274
+                            </td>
+
+                            <td>
+                                Pemrograman Berorientasi Objek
+                            </td>
+
+                            <td>2</td>
+
+                            <td>4</td>
+
+                            <td>
+                                <span class="badge bg-warning text-dark">
+                                    B
+                                </span>
+                            </td>
+
+                            <td>
+                                12.00
+                            </td>
+
+                        </tr>
+
+
+                        <tr>
+
+                            <td>7</td>
+
+                            <td>
+                                14823372
+                            </td>
+
+                            <td>
+                                Statistika dan Probabilitas
+                            </td>
+
+                            <td>2</td>
+
+                            <td>2</td>
+
+                            <td>
+                                <span class="badge bg-success">
+                                    A
+                                </span>
+                            </td>
+
+                            <td>
+                                8.00
+                            </td>
+
+                        </tr>
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= IPK ================= -->
+
+    <section id="ipk" class="container mt-5">
+
+        <div class="row g-4">
+
+
+            <!-- IPK -->
+
+            <div class="col-md-6">
+
+                <div class="ipk-box text-center">
+
+                    <p class="mb-1">
+                        IPK
+                    </p>
+
+                    <div class="ipk-number">
+                        3.38
+                    </div>
+
+                    <p class="mb-0">
+                        Indeks Prestasi Kumulatif
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <!-- RINGKASAN AKADEMIK -->
+
+            <div class="col-md-6">
+
+                <div class="table-container h-100">
+
+                    <h4 class="fw-bold mb-3">
+                        Ringkasan Akademik
+                    </h4>
+
+                    <table class="table">
+
+                        <tr>
+
+                            <td>
+                                Total Mata Kuliah
+                            </td>
+
+                            <td class="fw-bold text-end">
+                                7
+                            </td>
+
+                        </tr>
+
+
+                        <tr>
+
+                            <td>
+                                Total SKS
+                            </td>
+
+                            <td class="fw-bold text-end">
+                                20
+                            </td>
+
+                        </tr>
+
+
+                        <tr>
+
+                            <td>
+                                IPK
+                            </td>
+
+                            <td class="fw-bold text-end">
+                                3.38
+                            </td>
+
+                        </tr>
+
+                    </table>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer class="text-center">
+
+        <p class="mb-0">
+            © 2026 Galih Condro Widjoyo
+        </p>
+
+        <small>
+            Sistem dan Teknologi Informasi
+        </small>
+
+    </footer>
+
+
+    <!-- Bootstrap JavaScript -->
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js">
+    </script>
+
+
+    <!-- JavaScript External -->
+
+    <script src="script.js">
+    </script>
+
+</body>
+
+</html>
