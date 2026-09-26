@@ -1,3 +1,4 @@
+css
 body {
     background-color: #f4f6f9;
     font-family: Arial, sans-serif;
@@ -7,6 +8,7 @@ body {
     background-color: #151515;
 }
 
+
 /* =========================
    HERO - SPACE BACKGROUND
    ========================= */
@@ -15,77 +17,95 @@ body {
     position: relative;
     overflow: hidden;
 
-    background:
+    background-image:
+
+        /* ===== BINTANG ATAS ===== */
+        radial-gradient(1px 1px at 5% 10%, white, transparent),
+        radial-gradient(1.5px 1.5px at 12% 25%, white, transparent),
+        radial-gradient(1px 1px at 18% 45%, white, transparent),
+        radial-gradient(1.5px 1.5px at 25% 15%, white, transparent),
+        radial-gradient(1px 1px at 32% 35%, white, transparent),
+        radial-gradient(1.5px 1.5px at 40% 8%, white, transparent),
+        radial-gradient(1px 1px at 47% 28%, white, transparent),
+        radial-gradient(1.5px 1.5px at 55% 18%, white, transparent),
+        radial-gradient(1px 1px at 63% 40%, white, transparent),
+        radial-gradient(1.5px 1.5px at 70% 12%, white, transparent),
+        radial-gradient(1px 1px at 78% 32%, white, transparent),
+        radial-gradient(1.5px 1.5px at 85% 18%, white, transparent),
+        radial-gradient(1px 1px at 92% 42%, white, transparent),
+        radial-gradient(1.5px 1.5px at 97% 8%, white, transparent),
+
+        /* ===== BINTANG BAWAH ===== */
+        radial-gradient(1px 1px at 8% 75%, #b9d9ff, transparent),
+        radial-gradient(1.5px 1.5px at 16% 90%, white, transparent),
+        radial-gradient(1px 1px at 23% 65%, white, transparent),
+        radial-gradient(1.5px 1.5px at 30% 82%, #d8c7ff, transparent),
+        radial-gradient(1px 1px at 38% 70%, white, transparent),
+        radial-gradient(1.5px 1.5px at 46% 92%, white, transparent),
+        radial-gradient(1px 1px at 53% 62%, #b9d9ff, transparent),
+        radial-gradient(1.5px 1.5px at 61% 80%, white, transparent),
+        radial-gradient(1px 1px at 68% 68%, white, transparent),
+        radial-gradient(1.5px 1.5px at 76% 92%, #d8c7ff, transparent),
+        radial-gradient(1px 1px at 83% 72%, white, transparent),
+        radial-gradient(1.5px 1.5px at 90% 88%, white, transparent),
+        radial-gradient(1px 1px at 96% 65%, #b9d9ff, transparent),
+
+        /* ===== GLOW RUANG ===== */
         radial-gradient(circle at 20% 30%, rgba(80, 120, 180, 0.15), transparent 25%),
         radial-gradient(circle at 80% 20%, rgba(120, 80, 180, 0.12), transparent 25%),
         radial-gradient(circle at 50% 100%, rgba(50, 100, 160, 0.12), transparent 30%),
+
+        /* ===== BACKGROUND ===== */
         linear-gradient(135deg, #080b10, #151a20, #252c34);
 
     color: white;
     padding: 70px 20px;
 
-    /* Bintang kecil */
-    background-image:
-        radial-gradient(2px 2px at 10% 20%, white, transparent),
-        radial-gradient(1.5px 1.5px at 20% 70%, white, transparent),
-        radial-gradient(2px 2px at 35% 30%, white, transparent),
-        radial-gradient(1px 1px at 45% 80%, white, transparent),
-        radial-gradient(2px 2px at 60% 20%, white, transparent),
-        radial-gradient(1.5px 1.5px at 72% 65%, white, transparent),
-        radial-gradient(2px 2px at 85% 25%, white, transparent),
-        radial-gradient(1px 1px at 95% 75%, white, transparent),
-        radial-gradient(circle at 20% 30%, rgba(80, 120, 180, 0.15), transparent 25%),
-        radial-gradient(circle at 80% 20%, rgba(120, 80, 180, 0.12), transparent 25%),
-        linear-gradient(135deg, #080b10, #151a20, #252c34);
-
     animation: spaceMove 20s linear infinite;
 }
 
 
-/* Gerakan background perlahan */
+/* =========================
+   GERAKAN BINTANG
+   ========================= */
+
 @keyframes spaceMove {
     0% {
         background-position:
+            0 0, 0 0, 0 0, 0 0,
+            0 0, 0 0, 0 0, 0 0,
+            0 0, 0 0, 0 0, 0 0,
             0 0,
-            0 0,
-            0 0,
-            0 0,
-            0 0,
-            0 0,
-            0 0,
-            0 0,
-            center,
-            center,
+            0 0, 0 0, 0 0, 0 0,
+            0 0, 0 0, 0 0, 0 0,
+            0 0, 0 0, 0 0,
+            center, center, center,
             center;
     }
 
     50% {
         background-position:
-            15px 20px,
-            -20px 15px,
-            20px -15px,
-            -15px 20px,
-            20px 10px,
-            -10px -20px,
-            15px -10px,
-            -20px 15px,
-            center,
-            center,
+            10px 15px, -15px 10px, 12px -10px, -10px 15px,
+            15px 8px, -12px -15px, 10px -8px, -15px 12px,
+            12px 10px, -10px -12px, 15px -8px, -12px 15px,
+            10px -10px,
+            -10px 12px, 15px -8px, -12px 15px, 10px -12px,
+            -15px 10px, 12px -15px, -10px 8px, 15px -10px,
+            -12px 12px, 10px -8px,
+            center, center, center,
             center;
     }
 
     100% {
         background-position:
-            30px 40px,
-            -40px 30px,
-            40px -30px,
-            -30px 40px,
-            40px 20px,
-            -20px -40px,
-            30px -20px,
-            -40px 30px,
-            center,
-            center,
+            20px 30px, -30px 20px, 24px -20px, -20px 30px,
+            30px 16px, -24px -30px, 20px -16px, -30px 24px,
+            24px 20px, -20px -24px, 30px -16px, -24px 30px,
+            20px -20px,
+            -20px 24px, 30px -16px, -24px 30px, 20px -24px,
+            -30px 20px, 24px -30px, -20px 16px, 30px -20px,
+            -24px 24px, 20px -16px,
+            center, center, center,
             center;
     }
 }
@@ -123,6 +143,7 @@ body {
 
 
 /* Meteor kedua */
+
 .hero::after {
     content: "";
 
