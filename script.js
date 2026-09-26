@@ -39,19 +39,7 @@ function filterDataNilai() {
     return dataNilai.filter(mataKuliah => mataKuliah.sks >= 3);
 }
 
-// Output data nilai
-console.log("=== DATA NILAI MAHASISWA ===");
-
-dataNilai.forEach(function(mataKuliah) {
-    console.log(
-        mataKuliah.mataKuliah +
-        " | SKS: " + mataKuliah.sks +
-        " | Nilai: " + mataKuliah.nilai
-    );
-});
-
-console.log("----------------------------");
-
+// Output rata-rata
 console.log(
     "Rata-rata Nilai:",
     hitungRataRataNilai().toFixed(2)
@@ -59,6 +47,7 @@ console.log(
 
 console.log("----------------------------");
 
+// Output hasil filter
 console.log("Hasil Filter (SKS >= 3):");
 
 filterDataNilai().forEach(function(mataKuliah) {
