@@ -317,3 +317,16 @@ footer {
 
     margin-top: 50px;
 }
+
+/* =========================
+   DOM & EVENTS
+   ========================= */
+.form-success {
+    color: #198754;
+    font-weight: bold;
+}
+
+.form-error {
+    color: #dc3545;
+    font-weight: bold;
+}

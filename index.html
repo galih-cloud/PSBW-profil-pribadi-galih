@@ -95,12 +95,15 @@
                 Sistem dan Teknologi Informasi
             </p>
 
+            <!-- onclick diganti menjadi id agar menggunakan addEventListener di JS -->
             <button class="btn btn-light mt-3"
-                onclick="tampilkanPesan()">
+                id="btnProfil">
 
                 Lihat Profil
 
             </button>
+            
+
 
         </div>
 
@@ -178,6 +181,17 @@
 
             </div>
 
+
+            <!-- Input pencarian untuk interaksi addEventListener -->
+            <div class="mb-3">
+                <input type="text"
+                    id="cariNilai"
+                    class="form-control"
+                    placeholder="Cari mata kuliah...">
+            </div>
+            
+
+
             <div class="table-responsive">
 
                 <table class="table table-hover align-middle">
@@ -196,79 +210,13 @@
 
                     </thead>
 
-                    <tbody>
 
-                        <tr>
-                            <td>1</td>
-                            <td>14823192</td>
-                            <td>Arsitektur dan Organisasi Komputer</td>
-                            <td>2</td>
-                            <td>2</td>
-                            <td><span class="badge bg-primary">AB</span></td>
-                            <td>7.00</td>
-                        </tr>
-
-                        <tr>
-                            <td>2</td>
-                            <td>14823333</td>
-                            <td>Algoritma dan Struktur Data</td>
-                            <td>2</td>
-                            <td>3</td>
-                            <td><span class="badge bg-success">A</span></td>
-                            <td>12.00</td>
-                        </tr>
-
-                        <tr>
-                            <td>3</td>
-                            <td>14823313</td>
-                            <td>Sistem Basis Data</td>
-                            <td>2</td>
-                            <td>3</td>
-                            <td><span class="badge bg-primary">AB</span></td>
-                            <td>10.50</td>
-                        </tr>
-
-                        <tr>
-                            <td>4</td>
-                            <td>14823393</td>
-                            <td>Interaksi Manusia Komputer</td>
-                            <td>2</td>
-                            <td>3</td>
-                            <td><span class="badge bg-warning text-dark">B</span></td>
-                            <td>9.00</td>
-                        </tr>
-
-                        <tr>
-                            <td>5</td>
-                            <td>14823153</td>
-                            <td>Teknologi Informasi dan Aplikasi Bisnis Berkembang</td>
-                            <td>2</td>
-                            <td>3</td>
-                            <td><span class="badge bg-warning text-dark">B</span></td>
-                            <td>9.00</td>
-                        </tr>
-
-                        <tr>
-                            <td>6</td>
-                            <td>14823274</td>
-                            <td>Pemrograman Berorientasi Objek</td>
-                            <td>2</td>
-                            <td>4</td>
-                            <td><span class="badge bg-warning text-dark">B</span></td>
-                            <td>12.00</td>
-                        </tr>
-
-                        <tr>
-                            <td>7</td>
-                            <td>14823372</td>
-                            <td>Statistika dan Probabilitas</td>
-                            <td>2</td>
-                            <td>2</td>
-                            <td><span class="badge bg-success">A</span></td>
-                            <td>8.00</td>
-                        </tr>
-
+                    <!-- Data nilai sekarang akan dibuat oleh JavaScript
+                         menggunakan createElement -->
+                    <tbody id="tabelNilaiBody">
                     </tbody>
+                    
+
 
                 </table>
 
@@ -339,6 +287,60 @@
         </div>
 
     </section>
+
+
+    <!-- Form dengan validasi dan preventDefault() -->
+    <!-- ================= FORM PESAN ================= -->
+
+    <section class="container mt-5">
+
+        <div class="table-container">
+
+            <h4 class="fw-bold mb-3">
+                Kirim Pesan
+            </h4>
+
+            <form id="formPesan">
+
+                <div class="mb-3">
+
+                    <label for="nama" class="form-label">
+                        Nama
+                    </label>
+
+                    <input type="text"
+                        id="nama"
+                        class="form-control"
+                        placeholder="Masukkan nama">
+
+                </div>
+
+
+                <div class="mb-3">
+
+                    <label for="pesan" class="form-label">
+                        Pesan
+                    </label>
+
+                    <textarea id="pesan"
+                        class="form-control"
+                        placeholder="Masukkan pesan"></textarea>
+
+                </div>
+
+
+                <button type="submit" class="btn btn-dark">
+                    Kirim
+                </button>
+
+                <p id="pesanForm" class="mt-3 mb-0"></p>
+
+            </form>
+
+        </div>
+
+    </section>
+    <!-- 🔴 SELESAI TAMBAHAN -->
 
 
     <!-- ================= FOOTER ================= -->
