@@ -50,7 +50,7 @@ console.log("----------------------------");
 // Output hasil filter
 console.log("Hasil Filter (SKS >= 3):");
 
-filterDataNilai().forEach(function(mataKuliah) {
+filterDataNilai().forEach(function (mataKuliah) {
     console.log(
         mataKuliah.mataKuliah +
         " | SKS: " + mataKuliah.sks +
@@ -70,7 +70,7 @@ function tampilkanDataNilai(data) {
 
     tabelNilaiBody.innerHTML = "";
 
-    data.forEach(function(mataKuliah, index) {
+    data.forEach(function (mataKuliah, index) {
 
         const baris = document.createElement("tr");
 
@@ -142,11 +142,11 @@ tampilkanDataNilai(dataNilai);
 
 const cariNilai = document.getElementById("cariNilai");
 
-cariNilai.addEventListener("input", function() {
+cariNilai.addEventListener("input", function () {
 
     const kataKunci = cariNilai.value.toLowerCase();
 
-    const hasil = dataNilai.filter(function(mataKuliah) {
+    const hasil = dataNilai.filter(function (mataKuliah) {
         return mataKuliah.mataKuliah
             .toLowerCase()
             .includes(kataKunci);
@@ -154,7 +154,6 @@ cariNilai.addEventListener("input", function() {
 
     tampilkanDataNilai(hasil);
 });
-
 
 // =========================
 // INTERAKSI 2: TOMBOL PROFIL
@@ -164,34 +163,51 @@ const btnProfil = document.getElementById("btnProfil");
 
 btnProfil.addEventListener("click", tampilkanPesan);
 
+// =========================
+// MODAL TAMBAH DATA
+// =========================
+
+const modalTambah = document.getElementById("modalTambah");
+const btnBukaModal = document.getElementById("btnBukaModal");
+const btnTutupModal = document.getElementById("btnTutupModal");
+
+btnBukaModal.addEventListener("click", function () {
+    modalTambah.classList.add("show");
+});
+
+btnTutupModal.addEventListener("click", function () {
+    modalTambah.classList.remove("show");
+});
+
+modalTambah.addEventListener("click", function (event) {
+    if (event.target === modalTambah) {
+        modalTambah.classList.remove("show");
+    }
+});
 
 // =========================
-// FORM + VALIDASI
+// FORM TAMBAH DATA + VALIDASI
 // =========================
 
-const formPesan = document.getElementById("formPesan");
+const formTambahData = document.getElementById("formTambahData");
 
-formPesan.addEventListener("submit", function(event) {
+formTambahData.addEventListener("submit", function (event) {
 
     event.preventDefault();
 
-    const nama = document.getElementById("nama");
-    const pesan = document.getElementById("pesan");
+    const kode = document.getElementById("kodeBaru");
+    const nama = document.getElementById("namaBaru");
+    const sks = document.getElementById("sksBaru");
     const pesanForm = document.getElementById("pesanForm");
 
-    if (nama.value.trim() === "" || pesan.value.trim() === "") {
+    // Validasi input
+    if (
+        kode.value.trim() === "" ||
+        nama.value.trim() === "" ||
+        sks.value.trim() === ""
+    ) {
 
-        pesanForm.textContent = "Nama dan pesan wajib diisi.";
-
-        pesanForm.classList.add("form-error");
-        pesanForm.classList.remove("form-success");
-
-        return;
-    }
-
-    if (nama.value.trim().length < 3) {
-
-        pesanForm.textContent = "Nama minimal 3 karakter.";
+        pesanForm.textContent = "Semua data wajib diisi.";
 
         pesanForm.classList.add("form-error");
         pesanForm.classList.remove("form-success");
@@ -199,10 +215,31 @@ formPesan.addEventListener("submit", function(event) {
         return;
     }
 
-    pesanForm.textContent = "Pesan berhasil dikirim!";
+    if (sks.value < 1) {
+
+        pesanForm.textContent = "SKS harus lebih dari 0.";
+
+        pesanForm.classList.add("form-error");
+        pesanForm.classList.remove("form-success");
+
+        return;
+    }
+
+    // Tambahkan data baru ke array
+    dataNilai.push({
+        kode: kode.value,
+        mataKuliah: nama.value,
+        sks: Number(sks.value),
+        nilai: "A"
+    });
+
+    // Tampilkan ulang tabel
+    tampilkanDataNilai(dataNilai);
+
+    pesanForm.textContent = "Data berhasil ditambahkan!";
 
     pesanForm.classList.add("form-success");
     pesanForm.classList.remove("form-error");
 
-    formPesan.reset();
+    formTambahData.reset();
 });

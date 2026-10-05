@@ -1,5 +1,4 @@
-css
-body {
+css body {
     background-color: #f4f6f9;
     font-family: Arial, sans-serif;
 }
@@ -123,13 +122,11 @@ body {
     width: 180px;
     height: 2px;
 
-    background: linear-gradient(
-        90deg,
-        transparent,
-        white,
-        #8ec5ff,
-        transparent
-    );
+    background: linear-gradient(90deg,
+            transparent,
+            white,
+            #8ec5ff,
+            transparent);
 
     transform: rotate(-35deg);
 
@@ -152,13 +149,11 @@ body {
     width: 120px;
     height: 2px;
 
-    background: linear-gradient(
-        90deg,
-        transparent,
-        #ffffff,
-        #a7d8ff,
-        transparent
-    );
+    background: linear-gradient(90deg,
+            transparent,
+            #ffffff,
+            #a7d8ff,
+            transparent);
 
     transform: rotate(-35deg);
 
@@ -270,11 +265,9 @@ body {
    ========================= */
 
 .ipk-box {
-    background: linear-gradient(
-        135deg,
-        #212529,
-        #495057
-    );
+    background: linear-gradient(135deg,
+            #212529,
+            #495057);
 
     color: white;
 
@@ -329,4 +322,57 @@ footer {
 .form-error {
     color: #dc3545;
     font-weight: bold;
+}
+
+/* =========================
+   MODAL TAMBAH DATA
+   ========================= */
+
+.modal-tambah {
+    display: none;
+    position: fixed;
+    z-index: 9999;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.6);
+
+    align-items: center;
+    justify-content: center;
+}
+
+.modal-tambah.show {
+    display: flex;
+}
+
+.modal-content-tambah {
+    background-color: white;
+    width: 90%;
+    max-width: 500px;
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.25);
+}
+
+.modal-header-tambah {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 25px;
+}
+
+.modal-header-tambah h3 {
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.modal-header-tambah p {
+    margin-bottom: 0;
+    color: #6c757d;
+}
+
+.btn-tutup {
+    border: none;
+    background: transparent;
+    font-size: 30px;
+    line-height: 1;
+    cursor: pointer;
 }
